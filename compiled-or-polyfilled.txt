@@ -1,0 +1,41 @@
+These are COMPILED by Babel to ES5 :
+
+
+=>
+Async functions
+Block scoped functions 
+Classes
+Class Properties
+Computed property names
+Constants
+Decorators
+Default parameters
+Destructuring
+Modules
+Object rest and spread
+Property method assignment
+Property name shorthand
+Rest parameters
+Spread
+Template Literals
+
+
+There are POLYFILLED:
+
+ArrayBuffer
+Array.from
+Array.of
+Array#find
+Array#findIndex
+Function#name
+Map
+Number.isNaN
+Object.assign
+Object.entries
+Object.values
+Promise
+Set
+String.includes
+Symbol
+WeakMap
+WeakSet
