@@ -22,7 +22,7 @@ function simpleBenchmark(fn, name, ...args) {
 }
 
 // Tests for charFreq function.
-console.log('Start charFreq tests:\n');
+console.log('Start fancy fibonacci test:\n');
 simpleBenchmark(fibonacci, "Fibonacci", 8);
 simpleBenchmark(fibonacci, "Fibonacci", 20);
 simpleBenchmark(fibonacci, "Fibonacci", 30);
