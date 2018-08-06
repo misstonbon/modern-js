@@ -48,6 +48,18 @@ function batches(recipe, ingredients) {
 
 batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 100, sugar: 4, butter: 3 })
 batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 500, sugar: 1, butter: 1 })
-batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 500, sugar: 400, butter: 50 })
-batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 1000, sugar: 2000, butter: 300 })
+batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 500, sugar: 100, butter: 56 })
+batches({ milk: 2, sugar: 2, butter: 2 },{ milk: 51, sugar: 1234, butter: 343 })
 
+
+const batchChecker = (recipe, available) =>
+  Math.floor(
+    Math.min(...Object.keys(recipe)
+        .map(k => (available[k] / recipe[k]) || 0)
+    )
+  )
+  
+console.log(batchChecker({ milk: 2, sugar: 2, butter: 2 },{ milk: 100, sugar: 4, butter: 3 }))
+console.log(batchChecker({ milk: 2, sugar: 2, butter: 2 },{ milk: 500, sugar: 1, butter: 1 }))
+console.log(batchChecker({ milk: 2, sugar: 2, butter: 2 },{ milk: 500, sugar: 100, butter: 56 }))
+console.log(batchChecker({ milk: 2, sugar: 2, butter: 2 },{ milk: 51, sugar: 1234, butter: 343 }))
